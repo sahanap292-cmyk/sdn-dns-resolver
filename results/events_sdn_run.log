@@ -1,0 +1,24 @@
+[08:13:52.890] Controller started: MODE=static POLICY=least_loaded FLOOD_RATE=200.0/s BLOCK_SECS=30
+[08:14:12.935] Switch s1 connected, rules installed (miss, DNS, heartbeat)
+[08:14:12.994] Switch s2 connected, rules installed (miss, DNS, heartbeat)
+[08:14:13.043] Switch s3 connected, rules installed (miss, DNS, heartbeat)
+[08:14:31.449] ns1 is UP (load=5)
+[08:14:44.364] ns2 is UP (load=10)
+[08:14:55.024] ns3 is UP (load=20)
+[08:15:51.039] REDIRECT on s1: 10.0.0.1 -> 10.0.0.100  =>  ns1 (10.0.0.21), load=5
+[08:16:11.983] ns1 marked DOWN (no heartbeat for 6s) [static mode: no action taken]
+[08:21:36.586] ns2 marked DOWN (no heartbeat for 44s) [static mode: no action taken]
+[08:21:36.619] ns3 marked DOWN (no heartbeat for 43s) [static mode: no action taken]
+[08:21:36.626] ns2 RECOVERED after 0.0s down (load=10) -> back in rotation
+[08:21:36.627] ns3 RECOVERED after 0.0s down (load=20) -> back in rotation
+[08:24:43.195] ns1 RECOVERED after 511.2s down (load=5) -> back in rotation
+[08:25:02.198] REDIRECT on s1: 10.0.0.1 -> 10.0.0.100  =>  ns1 (10.0.0.21), load=5
+[08:25:08.404] REDIRECT on s1: 10.0.0.2 -> 10.0.0.100  =>  ns2 (10.0.0.22), load=10
+[08:25:14.865] REDIRECT on s1: 10.0.0.3 -> 10.0.0.100  =>  ns3 (10.0.0.23), load=20
+[08:25:20.705] REDIRECT on s1: 10.0.0.4 -> 10.0.0.100  =>  ns1 (10.0.0.21), load=5
+[08:25:33.345] ns1 marked DOWN (no heartbeat for 6s) [static mode: no action taken]
+[08:26:16.028] REDIRECT on s1: 10.0.0.1 -> 10.0.0.100  =>  ns1 (10.0.0.21), load=5
+[08:31:01.204] ns1 RECOVERED after 327.9s down (load=5) -> back in rotation
+[08:31:33.816] ns1 marked DOWN (no heartbeat for 6s) [static mode: no action taken]
+[08:31:33.820] ns2 marked DOWN (no heartbeat for 6s) [static mode: no action taken]
+[08:31:33.821] ns3 marked DOWN (no heartbeat for 7s) [static mode: no action taken]
