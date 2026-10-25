@@ -1,0 +1,6 @@
+ns1 python3 /home/sahana/CN/tests/hb_sender.py ns1 5 &
+ns2 python3 /home/sahana/CN/tests/hb_sender.py ns2 10 &
+ns3 python3 /home/sahana/CN/tests/hb_sender.py ns3 20 &
+ns1 python3 /home/sahana/CN/tests/udp_echo_server.py srv1 &
+ns2 python3 /home/sahana/CN/tests/udp_echo_server.py srv2 &
+ns3 python3 /home/sahana/CN/tests/udp_echo_server.py srv3 &
