@@ -1,0 +1,1 @@
+r1 python3 /home/sahana/CN/resolver/resolver.py --mode static --upstream-proto m1 --port 5353 --timeout 0.4 --upstream sdn1=10.0.0.100:5353 --upstream sdn2=10.0.0.100:5353 &
