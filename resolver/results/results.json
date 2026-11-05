@@ -1,0 +1,109 @@
+{
+  "checks": [
+    {
+      "test": "controller receives heartbeats from ns1, ns2, ns3",
+      "passed": true,
+      "detail": "{'ns1': True, 'ns2': True, 'ns3': True}"
+    },
+    {
+      "test": "every name in the zone resolves to the right IP",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "test": "unknown name returns NXDOMAIN",
+      "passed": true,
+      "detail": "NXDOMAIN"
+    },
+    {
+      "test": "second lookup is served from the TTL cache",
+      "passed": true,
+      "detail": "sources=['ns1', 'cache']"
+    },
+    {
+      "test": "cache entry expires after its TTL (2s)",
+      "passed": true,
+      "detail": "sources=['ns1', 'ns1']"
+    },
+    {
+      "test": "all four clients (h1-h4) can resolve through r1",
+      "passed": true,
+      "detail": ""
+    }
+  ],
+  "cache": [
+    {
+      "mode": "static",
+      "overall": {
+        "n": 300,
+        "success_rate": 1.0,
+        "mean_ms": 2.35,
+        "p50_ms": 1.88,
+        "p95_ms": 6.26,
+        "p99_ms": 9.69
+      },
+      "cache_hit_rate": 0.95,
+      "hit_mean_ms": 2.3,
+      "miss_mean_ms": 3.38
+    },
+    {
+      "mode": "sdn",
+      "overall": {
+        "n": 300,
+        "success_rate": 1.0,
+        "mean_ms": 2.56,
+        "p50_ms": 1.9,
+        "p95_ms": 6.29,
+        "p99_ms": 9.08
+      },
+      "cache_hit_rate": 0.95,
+      "hit_mean_ms": 2.55,
+      "miss_mean_ms": 2.81
+    }
+  ],
+  "cold": [
+    {
+      "mode": "static",
+      "n": 200,
+      "success_rate": 1.0,
+      "mean_ms": 2.2,
+      "p50_ms": 1.8,
+      "p95_ms": 4.93,
+      "p99_ms": 8.75
+    },
+    {
+      "mode": "sdn",
+      "n": 200,
+      "success_rate": 1.0,
+      "mean_ms": 1.87,
+      "p50_ms": 1.61,
+      "p95_ms": 3.13,
+      "p99_ms": 7.62
+    }
+  ],
+  "failover": [
+    {
+      "mode": "static",
+      "baseline_ms": 3.59,
+      "slow_threshold_ms": 50.0,
+      "queries_after_kill": 16,
+      "failed_queries": 0,
+      "slow_queries": 16,
+      "worst_latency_ms": 555.73,
+      "recovery_s": null,
+      "controller_detect_s": 1.28
+    },
+    {
+      "mode": "sdn",
+      "baseline_ms": 2.87,
+      "slow_threshold_ms": 50.0,
+      "queries_after_kill": 66,
+      "failed_queries": 0,
+      "slow_queries": 3,
+      "worst_latency_ms": 519.5,
+      "recovery_s": 1.64,
+      "controller_detect_s": 1.19
+    }
+  ],
+  "loss": []
+}
