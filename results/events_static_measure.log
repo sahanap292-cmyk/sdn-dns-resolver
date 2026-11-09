@@ -1,0 +1,9 @@
+[14:13:28.580] Controller started: MODE=static POLICY=least_loaded FLOOD_RATE=200.0/s BLOCK_SECS=30
+[14:13:45.910] Switch s1 connected, rules installed (miss, DNS, heartbeat)
+[14:13:45.958] Switch s2 connected, rules installed (miss, DNS, heartbeat)
+[14:13:46.001] Switch s3 connected, rules installed (miss, DNS, heartbeat)
+[14:13:53.951] ns2 is UP (load=0)
+[14:13:53.951] ns3 is UP (load=0)
+[14:13:53.951] ns1 is UP (load=0)
+[14:14:07.016] REDIRECT on s1: 10.0.0.1 -> 10.0.0.100  =>  ns1 (10.0.0.21), load=0
+[14:14:44.036] ns1 marked DOWN (no heartbeat for 6s) [static mode: no action taken]
